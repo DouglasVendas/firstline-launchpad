@@ -1,54 +1,70 @@
-import { Zap, GitBranch, Settings } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { MessageCircle, Instagram, ShieldCheck, Share2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const cards = [
+const channels = [
   {
-    Icon: Zap,
-    title: 'Mensagens Rápidas',
-    desc: 'Crie templates de mensagens para respostas ágeis e consistentes em todos os canais.',
-    gradient: true,
+    icon: MessageCircle,
+    title: "WhatsApp Oficial & Híbrido",
+    desc: "Use a API Oficial para escala ou conecte via QR Code (estilo Web) para manter seu número atual."
   },
   {
-    Icon: GitBranch,
-    title: 'Funis Programados',
-    desc: 'Configure funis de vendas automatizados com etapas personalizadas e acompanhamento inteligente.',
-    gradient: false,
+    icon: Instagram,
+    title: "Instagram Direct",
+    desc: "Responda DMs, stories e comentários diretamente do CRM. Nunca mais perca uma venda por direct não lido."
   },
   {
-    Icon: Settings,
-    title: 'Gatilhos Automáticos',
-    desc: 'Automatize ações com base em comportamentos do cliente para nunca perder uma oportunidade.',
-    gradient: true,
+    icon: ShieldCheck,
+    title: "Blindagem de Dados",
+    desc: "O lead fala com a EMPRESA, não com o CPF do vendedor. Histórico centralizado e seguro."
   },
+  {
+    icon: Share2,
+    title: "Omnichannel Real",
+    desc: "O cliente começa no Insta, vai pro Zap e termina no telefone. O histórico segue ele."
+  }
 ];
 
 const FeatureCardsSection = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div ref={ref} className="container mx-auto px-4">
-        <div className={`grid md:grid-cols-3 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {cards.map(({ Icon, title, desc, gradient }, i) => (
-            <div
-              key={title}
-              className={`rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 ${
-                gradient
-                  ? 'gradient-primary text-primary-foreground shadow-lg'
-                  : 'bg-card border border-border shadow-card hover:shadow-card-hover'
-              }`}
-              style={{ transitionDelay: `${i * 100}ms` }}
+    <section className="py-24 bg-background border-t border-border">
+      <div className="container mx-auto px-4">
+
+        <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-10">
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground mb-4">
+              Seu Cliente está em Todo Lugar. <br />
+              <span className="text-secondary-foreground">Sua Equipe deve estar em Um Só.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Fim da "brincadeira de alt-tab". Uma única tela para gerenciar WhatsApp, Instagram, Ligações e E-mail.
+            </p>
+          </div>
+          <div className="lg:w-1/2 flex justify-end">
+            {/* Abstract Graphic Element - Connection */}
+            <div className="relative w-full max-w-sm h-1 bg-gradient-to-r from-primary to-accent rounded-full opacity-50" />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {channels.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="bg-card border border-border p-6 rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1 group"
             >
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                gradient ? 'bg-primary-foreground/20' : 'gradient-primary'
-              }`}>
-                <Icon className={`w-7 h-7 ${gradient ? 'text-primary-foreground' : 'text-primary-foreground'}`} />
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <item.icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
               </div>
-              <h3 className={`font-display font-bold text-xl mb-3 ${gradient ? '' : 'text-foreground'}`}>{title}</h3>
-              <p className={`leading-relaxed ${gradient ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>{desc}</p>
-            </div>
+              <h3 className="text-lg font-bold text-foreground mb-3">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

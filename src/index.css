@@ -6,49 +6,50 @@
 
 @layer base {
   :root {
-    --background: 210 17% 98%;
-    --foreground: 0 0% 18%;
+    /* Zen Tech - Dark Mode Palette */
+    --background: 0 0% 2%;        /* #050505 - Deep Obsidian */
+    --foreground: 0 0% 98%;       /* #fafafa - White Text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 18%;
+    --card: 0 0% 4%;              /* #0a0a0a - Soft Black Card */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 18%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 263 84% 58%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 178 100% 47%;      /* #00f2ea - Electric Cyan (AI/Tech) */
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 221 64% 33%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 9%;         /* #171717 - Dark Grey */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 17% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 60%; /* Softer text for non-critical info */
 
-    --accent: 153 62% 52%;
+    --accent: 153 84% 39%;        /* #10b981 - Neon Green (Growth/Money) - Adjusted for contrast */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 263 84% 58%;
+    --border: 0 0% 12%;           /* Subtle borders */
+    --input: 0 0% 12%;
+    --ring: 178 100% 47%;         /* Focus ring same as primary */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 178 100% 47%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 178 100% 47%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(263, 84%, 58%), hsl(221, 64%, 33%));
-    --gradient-primary-horizontal: linear-gradient(90deg, hsl(263, 84%, 58%), hsl(221, 64%, 33%));
-    --shadow-card: 0 4px 24px -4px hsl(263 84% 58% / 0.1);
-    --shadow-card-hover: 0 8px 32px -4px hsl(263 84% 58% / 0.18);
+    --gradient-primary: linear-gradient(135deg, hsl(178, 100%, 47%, 0.1), hsl(153, 84%, 39%, 0.1));
+    --gradient-primary-horizontal: linear-gradient(90deg, #00f2ea, #10b981);
+    --shadow-card: 0 4px 24px -4px rgba(0, 242, 234, 0.05); /* Cyan glow */
+    --shadow-card-hover: 0 8px 32px -4px rgba(0, 242, 234, 0.15);
   }
 }
 

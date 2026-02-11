@@ -1,30 +1,22 @@
 import HeroSection from '@/components/landing/HeroSection';
-import FeaturesSection from '@/components/landing/FeaturesSection';
-import HowWeHelpSection from '@/components/landing/HowWeHelpSection';
-import TargetAudienceSection from '@/components/landing/TargetAudienceSection';
-import TabsSection from '@/components/landing/TabsSection';
-import IntegrationSection from '@/components/landing/IntegrationSection';
-import FeatureCardsSection from '@/components/landing/FeatureCardsSection';
-import WebhookSection from '@/components/landing/WebhookSection';
+import AgentsSection from '@/components/landing/AgentsSection';
+import ControlSection from '@/components/landing/ControlSection';
+import FeatureCardsSection from '@/components/landing/FeatureCardsSection'; // Omnichannel
+import FeaturesSection from '@/components/landing/FeaturesSection'; // 3 Pillars Recap
 import DashboardSection from '@/components/landing/DashboardSection';
-import WhyChooseSection from '@/components/landing/WhyChooseSection';
 import LeadFormSection from '@/components/landing/LeadFormSection';
 import FooterSection from '@/components/landing/FooterSection';
 import FloatingWhatsApp from '@/components/landing/FloatingWhatsApp';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <HeroSection />
+      <AgentsSection />
+      <ControlSection />
+      <FeatureCardsSection /> {/* Omnichannel */}
       <FeaturesSection />
-      <HowWeHelpSection />
-      <TargetAudienceSection />
-      <TabsSection />
-      <IntegrationSection />
-      <FeatureCardsSection />
-      <WebhookSection />
       <DashboardSection />
-      <WhyChooseSection />
       <LeadFormSection />
       <FooterSection />
       <FloatingWhatsApp />
