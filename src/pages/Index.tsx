@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from '@/components/landing/HeroSection';
+import FeaturesSection from '@/components/landing/FeaturesSection';
+import HowWeHelpSection from '@/components/landing/HowWeHelpSection';
+import TargetAudienceSection from '@/components/landing/TargetAudienceSection';
+import TabsSection from '@/components/landing/TabsSection';
+import IntegrationSection from '@/components/landing/IntegrationSection';
+import FeatureCardsSection from '@/components/landing/FeatureCardsSection';
+import WebhookSection from '@/components/landing/WebhookSection';
+import DashboardSection from '@/components/landing/DashboardSection';
+import WhyChooseSection from '@/components/landing/WhyChooseSection';
+import LeadFormSection from '@/components/landing/LeadFormSection';
+import FooterSection from '@/components/landing/FooterSection';
+import FloatingWhatsApp from '@/components/landing/FloatingWhatsApp';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection />
+      <FeaturesSection />
+      <HowWeHelpSection />
+      <TargetAudienceSection />
+      <TabsSection />
+      <IntegrationSection />
+      <FeatureCardsSection />
+      <WebhookSection />
+      <DashboardSection />
+      <WhyChooseSection />
+      <LeadFormSection />
+      <FooterSection />
+      <FloatingWhatsApp />
     </div>
   );
 };
