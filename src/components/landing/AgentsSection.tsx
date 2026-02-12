@@ -43,8 +43,7 @@ const AgentsSection = () => {
                         <span className="text-muted-foreground">Não Está na Folha de Pagamento.</span>
                     </h2>
                     <p className="text-lg text-muted-foreground">
-                        Crie agentes de IA especializados que trabalham enquanto você dorme, comem ou treina seus humanos.
-                        Eles não pedem aumento, não ficam doentes e nunca esquecem de enviar uma mensagem.
+                        Crie agentes de IA especializados que trabalham enquanto você dorme, come ou treina. Eles não pedem aumento, não ficam doentes e nunca esquecem de enviar uma mensagem.
                     </p>
                 </div>
 
