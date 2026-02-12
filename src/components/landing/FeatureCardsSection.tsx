@@ -36,7 +36,7 @@ const FeatureCardsSection = () => {
               <span className="text-secondary-foreground">Sua Equipe deve estar em Um Só.</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Fim da "brincadeira de alt-tab". Uma única tela para gerenciar WhatsApp, Instagram, Ligações e E-mail.
+              Fim da "brincadeira de alt-tab". Uma única tela para gerenciar vários WhatsApp, Instagram e Ligações.
             </p>
           </div>
           <div className="lg:w-1/2 flex justify-end">
