@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MessageSquare, CheckSquare, Clock } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import crmImage from '@/assets/crm-interface.png';
 
 const tabs = [
   {
@@ -47,11 +48,10 @@ const TabsSection = () => {
               <button
                 key={id}
                 onClick={() => setActiveTab(id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
-                  activeTab === id
-                    ? 'gradient-primary text-primary-foreground shadow-lg'
-                    : 'bg-card text-muted-foreground hover:text-foreground border border-border'
-                }`}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === id
+                  ? 'gradient-primary text-primary-foreground shadow-lg'
+                  : 'bg-card text-muted-foreground hover:text-foreground border border-border'
+                  }`}
               >
                 <Icon className="w-4 h-4" />
                 {label}
@@ -70,7 +70,11 @@ const TabsSection = () => {
                 <p className="text-muted-foreground leading-relaxed">{active.description}</p>
               </div>
               <div className="bg-muted p-8 flex items-center justify-center min-h-[300px]">
-                <div className="w-full max-w-sm aspect-[4/3] rounded-xl gradient-primary opacity-20" />
+                <img
+                  src={crmImage}
+                  alt="CRM Interface"
+                  className="w-full max-w-sm rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </div>
           </div>

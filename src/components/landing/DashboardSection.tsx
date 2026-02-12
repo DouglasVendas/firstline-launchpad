@@ -1,6 +1,6 @@
 import { BarChart3, PieChart, TrendingUp, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import dashboardPreview from '@/assets/dashboard-preview.png';
+import dashboardCrm from '@/assets/dashboard-crm.jpg';
 
 const DashboardSection = () => {
   return (
@@ -19,7 +19,7 @@ const DashboardSection = () => {
           >
             <div className="absolute -inset-1 bg-gradient-to-r from-accent to-primary opacity-20 blur-xl rounded-2xl group-hover:opacity-40 transition-opacity duration-1000" />
             <img
-              src={dashboardPreview}
+              src={dashboardCrm}
               alt="Dashboard Analytics"
               className="relative rounded-xl border border-border shadow-2xl w-full h-auto"
             />
